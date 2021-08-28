@@ -31,7 +31,7 @@ namespace SCP106ContainRework
         {
             if (ev.Target.Role == RoleType.Scp106 && ev.HitInformation.Tool == DamageTypes.Recontainment)
             {
-                if (random.Next(100) <= config.RecontainmentChance) {
+                if (random.Next(100) >= config.RecontainmentChance) {
                     Log.Info("SCP 106 Recontainment Failure");
                     ev.IsAllowed = false;
                     Cassie.Message("Attention all personnel . SCP 1 0 6 Recontainment Protocol Failure Detected");
