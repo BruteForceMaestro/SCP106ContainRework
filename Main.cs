@@ -9,9 +9,8 @@ namespace SCP106ContainRework
     {
         EventHandlers EventHandler;
 
-        public override Version Version { get; } = new Version("1.1");
-
-        public override Version RequiredExiledVersion => base.RequiredExiledVersion;
+        public override Version Version => new Version(1, 0, 1);
+        public override Version RequiredExiledVersion => new Version(3, 0, 0);
 
         public override void OnEnabled()
         {
